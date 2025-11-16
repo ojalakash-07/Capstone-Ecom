@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive E-commerce Home</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background: #f3f6ff;
+        }
+
+        /* Header */
+        header {
+            background: #0056d6;
+            color: #fff;
+            padding: 15px 25px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            /* flex-wrap: wrap; */
+        }
+
+        header h1 {
+            font-size: 30px;
+            font-weight: 800;
+        }
+
+        nav {
+            display: flex;
+            /* flex-wrap: wrap; */
+            gap: 10px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-size: 14px;
+            padding: 6px 10px;
+            border-radius: 6px;
+        }
+
+        nav a:hover {
+            background: rgba(255, 255, 255, 0.25);
+        }
+
+        /* Product Section */
+        .container {
+            padding: 20px;
+        }
+
+        h2 { margin-bottom: 15px; }
+
+        .products {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 20px;
+        }
+
+        .card {
+            background: #fff;
+            border-radius: 10px;
+            padding: 15px;
+            text-align: center;
+            height: 100%;
+        }
+
+        /* .card:hover {
+            /* transform: translateY(-5px); 
+        } */
+
+        .card img {
+            width: 100%;
+            height: 500px;
+            object-fit: contain;
+            background: #f9f9f9;
+            border-radius: 8px;
+            margin-bottom: 10px;
+        }
+
+        .card button {
+            margin-top: 10px;
+            width: 100%;
+            padding: 10px;
+            border: none;
+            border-radius: 6px;
+            background: #0056d6;
+            color: #fff;
+            cursor: pointer;
+            font-size: 15px;
+        }
+
+        .card button:hover {
+            background: #003c96;
+        }
+
+        @media(max-width: 600px){
+            header {
+                justify-content: center;
+                text-align: center;
+                gap: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>MERCADO</h1>
+    <nav>
+        <a href="#">Account</a>
+        <a href="#">My Orders</a>
+        <a href="#">Cart</a>
+        <a href="#">Wishlist</a>
+        <a href="#">Help</a>
+    </nav>
+</header>
+
+<div class="container">
+    <h2>Featured Products</h2>
+    <div class="products">
+
+        <!-- Shoe -->
+        <div class="card">
+            <img src="https://assets.adidas.com/images/w_600,f_auto,q_auto/ab3f322e9d194cb3bd2e90ec6cfa2c95_9366/Predator_League_Firm-Multi-Ground_Boots_White_ID1330_HM1.jpg" alt="Shoe">
+            <h3>Adidas Predators</h3>
+            <p>Rs 4,599</p>
+            <button>Add to Cart</button>
+        </div>
+
+        <!-- Electronics item -->
+        <div class="card">
+            <img src="https://encrypted-tbn2.gstatic.com/shopping?q=tbn:ANd9GcT8sxagIu6uenYJ2GJtTXGOQcOrJ4gBlrCekts4aHqW7IBkdzS15gjYi9w4c6zZPHgMy4HRaG-3F3hu9tkk2wUk-bheWiS7-dP6ENIL3JDHKDZzbqndHRxr&usqp=CAc" alt="Electronic Device">
+            <h3>Motorola Edge 60 fusion</h3>
+            <p>Rs 22,999</p>
+            <button>Add to Cart</button>
+        </div>
+
+    </div>
+</div>
+
+</body>
+</html>
