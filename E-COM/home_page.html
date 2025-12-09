@@ -4,168 +4,11 @@
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>E-Com Homepage</title>
+<link rel="stylesheet" href="home.css">
 
-<style>
-:root { --bg:#fff; --text:#000; --card:#f4f4f4; }
-.dark { --bg:#111; --text:#fff; --card:#222; }
-
-body {
-  margin:0; font-family:Arial; background:var(--bg); color:var(--text);
-  transition:0.3s;
-}
-
-/* HEADER */
-header {
-  display:flex; justify-content:space-between; align-items:center;
-  padding:15px 25px; background:#007bff; color:white;
-}
-nav a {
-  margin:0 10px; color:white; text-decoration:none;
-}
-#themeBtn, #menuBtn {
-  background:white; color:#007bff; border:none; padding:8px 12px;
-  font-weight:bold; cursor:pointer; border-radius:5px;
-}
-#cartCount {
-  display:inline-block; background:red; padding:4px 10px; border-radius:20px;
-}
-
-/* SEARCH BAR */
-#searchBar {
-  width:90%; padding:10px; margin:20px auto; display:block;
-  border-radius:8px; border:1px solid #aaa;
-}
-
-/* PRODUCTS */
-.product-link {
-  text-decoration: none;
-  color: inherit;
-}
-.product-link:hover .product {
-  transform: scale(1.03);
-  transition: 0.3s;
-}
-
-
-.products {
-  display:grid; grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
-  gap:20px; padding:25px;
-}
-.product {
-  background:var(--card); padding:15px; border-radius:10px;
-  transition:0.3s; border:1px solid #ccc;
-}
-.product img {
-  width:100%; height:160px; object-fit:cover; border-radius:10px;
-  transition:0.4s;
-}
-.product:hover img { transform:scale(1.05); }
-.product button {
-  background:#007bff; color:white; border:none;
-  margin-top:10px; padding:10px; width:100%; cursor:pointer;
-  border-radius:6px; font-size:14px;
-}
-.product button:hover { opacity:0.8; }
-
-/* WISHLIST HEART */
-.wish {
-  cursor:pointer; font-size:20px; float:right; user-select:none;
-}
-
-/* MOBILE NAV */
-#mobileMenu { display:none; flex-direction:column; background:#007bff; padding:10px; }
-#mobileMenu a { color:white; padding:8px 0; }
-#mobileMenu.show { display:flex; }
-
-@media (min-width:768px) {
-  #menuBtn { display:none; }
-  #mobileMenu { display:flex !important; flex-direction:row; gap:15px; background:none; }
-  #mobileMenu a { padding:0; }
-}
-
-/* TOAST */
-#toast {
-  position:fixed; bottom:-60px; left:50%; transform:translateX(-50%);
-  background:#333; color:#fff; padding:10px 20px;
-  border-radius:6px; transition:0.4s;
-}
-
-/* LOADING SCREEN */
-#loader {
-  position:fixed; top:0; left:0; width:100%; height:100%;
-  background:white; display:flex; justify-content:center; align-items:center;
-  font-size:22px; z-index:9999;
-}
-
-/* ----------------------------------------------------
-   📱 Mobile Phones (max-width: 600px)
------------------------------------------------------*/
-@media (max-width: 600px) {
-
-  header {
-    flex-direction: column;
-    text-align: center;
-    gap: 10px;
-  }
-
-  #mobileMenu {
-    flex-direction: column;
-    text-align: center;
-    width: 100%;
-  }
-
-  .products {
-    grid-template-columns: 1fr;
-    padding: 15px;
-  }
-
-  .product img {
-    height: 180px;
-  }
-}
-
-/* ----------------------------------------------------
-   📱📱 Small Tablets (600px – 768px)
------------------------------------------------------*/
-@media (min-width: 600px) and (max-width: 768px) {
-
-  .products {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
-  header {
-    padding: 12px 18px;
-  }
-}
-
-/* ----------------------------------------------------
-   💻 Tablets + Small Laptops (768px – 1024px)
------------------------------------------------------*/
-@media (min-width: 768px) and (max-width: 1024px) {
-
-  .products {
-    grid-template-columns: repeat(3, 1fr);
-  }
-}
-
-/* ----------------------------------------------------
-   🖥 Large Screens (above 1024px)
------------------------------------------------------*/
-@media (min-width: 1024px) {
-
-  .products {
-    grid-template-columns: repeat(4, 1fr);
-  }
-}
-
-</style>
 </head>
 
 <body>
-
-<!-- LOADING ANIMATION -->
-<div id="loader">Loading...</div>
-
 <header>
   <h2>MERCADO</h2>
   <button id="menuBtn">☰</button>
@@ -181,22 +24,19 @@ nav a {
   </div>
 </header>
 
-<!-- SEARCH BAR -->
+
+
 <input type="text" id="searchBar" placeholder="Search products...">
 
-<!-- TOAST MESSAGE -->
-<div id="toast">Added to cart!</div>
-
 <section class="products">
-<a href="Prod1.html" class="product-link">
-   <div class="product" data-id="1" data-name="Running Shoes" data-price="1499">
+
+  <div class="product" data-id="1" data-name="Running Shoes" data-price="1499">
     <span class="wish">♡</span>
     <img src="https://assets.adidas.com/images/w_600,f_auto,q_auto/ab3f322e9d194cb3bd2e90ec6cfa2c95_9366/Predator_League_Firm-Multi-Ground_Boots_White_ID1330_HM1.jpg" />
     <h3>Running Shoes</h3>
     <p>₹1499</p>
     <button class="add">Add to Cart</button>
   </div>
-</a>
 
   <div class="product" data-id="2" data-name="Smart Watch" data-price="2499">
     <span class="wish">♡</span>
@@ -214,7 +54,6 @@ nav a {
     <button class="add">Add to Cart</button>
   </div>
 
-<a href="Prod2.html" class="product-link">
   <div class="product" data-id="4" data-name="Mobile Phone" data-price="22999">
     <span class="wish">♡</span>
     <img src="https://encrypted-tbn2.gstatic.com/shopping?q=tbn:ANd9GcRAvQbXQJBO-7W5IbgYDBhisF4bbjOnx5hBc_WqndKgNAUvrfzizZtmz-EnABJJc77Z_YeGjJunO0pjdT2KCQXSjhSenSQ1BY0zc6uEpABJ1luyjms_V3DY&usqp=CAc" />
@@ -222,95 +61,8 @@ nav a {
     <p>₹22,999</p>
     <button class="add">Add to Cart</button>
   </div>
-</a>
 
 </section>
-
-
-
-<script>
-// =========================
-// LOADING ANIMATION
-// =========================
-window.onload = () => {
-  document.getElementById("loader").style.display = "none";
-};
-
-// =========================
-// SEARCH BAR
-// =========================
-const searchBar = document.getElementById("searchBar");
-
-searchBar.addEventListener("keyup", () => {
-  let query = searchBar.value.toLowerCase();
-  document.querySelectorAll(".product").forEach(product => {
-    let name = product.querySelector("h3").innerText.toLowerCase();
-    product.style.display = name.includes(query) ? "block" : "none";
-  });
-});
-
-// =========================
-// WISHLIST HEART
-// =========================
-document.querySelectorAll(".wish").forEach(btn => {
-  btn.addEventListener("click", () => {
-    btn.innerText = btn.innerText === "♡" ? "❤️" : "♡";
-  });
-});
-
-// =========================
-// TOAST FUNCTION
-// =========================
-function showToast(msg){
-  const toast = document.getElementById("toast");
-  toast.innerText = msg;
-  toast.style.bottom = "20px";
-  setTimeout(()=> toast.style.bottom = "-60px", 2000);
-}
-
-// =========================
-// THEME TOGGLE
-// =========================
-const themeBtn = document.getElementById("themeBtn");
-if(localStorage.getItem("theme") === "dark") document.body.classList.add("dark");
-
-themeBtn.onclick = () => {
-  document.body.classList.toggle("dark");
-  localStorage.setItem("theme", document.body.classList.contains("dark") ? "dark" : "light");
-};
-
-// =========================
-// CART FUNCTIONALITY
-// =========================
-function loadCart(){ return JSON.parse(localStorage.getItem("cart")) || []; }
-function saveCart(c){ localStorage.setItem("cart", JSON.stringify(c)); }
-function updateCount(){ document.getElementById("cartCount").innerText = loadCart().length; }
-
-updateCount();
-
-document.querySelectorAll('.add').forEach(btn => {
-  btn.addEventListener('click', () => {
-    const product = btn.parentElement;
-    const item = {
-      id: product.dataset.id,
-      name: product.dataset.name,
-      price: product.dataset.price
-    };
-    const cart = loadCart();
-    cart.push(item);
-    saveCart(cart);
-    updateCount();
-    showToast("Added to cart!");
-  });
-});
-
-// =========================
-// MOBILE MENU
-// =========================
-const menuBtn = document.getElementById("menuBtn");
-const mobileMenu = document.getElementById("mobileMenu");
-menuBtn.onclick = () => mobileMenu.classList.toggle("show");
-
-</script>
+<script src="home.js"></script>
 </body>
 </html>
