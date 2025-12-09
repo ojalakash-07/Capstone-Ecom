@@ -37,6 +37,16 @@ nav a {
 }
 
 /* PRODUCTS */
+.product-link {
+  text-decoration: none;
+  color: inherit;
+}
+.product-link:hover .product {
+  transform: scale(1.03);
+  transition: 0.3s;
+}
+
+
 .products {
   display:grid; grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
   gap:20px; padding:25px;
@@ -86,6 +96,68 @@ nav a {
   background:white; display:flex; justify-content:center; align-items:center;
   font-size:22px; z-index:9999;
 }
+
+/* ----------------------------------------------------
+   📱 Mobile Phones (max-width: 600px)
+-----------------------------------------------------*/
+@media (max-width: 600px) {
+
+  header {
+    flex-direction: column;
+    text-align: center;
+    gap: 10px;
+  }
+
+  #mobileMenu {
+    flex-direction: column;
+    text-align: center;
+    width: 100%;
+  }
+
+  .products {
+    grid-template-columns: 1fr;
+    padding: 15px;
+  }
+
+  .product img {
+    height: 180px;
+  }
+}
+
+/* ----------------------------------------------------
+   📱📱 Small Tablets (600px – 768px)
+-----------------------------------------------------*/
+@media (min-width: 600px) and (max-width: 768px) {
+
+  .products {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  header {
+    padding: 12px 18px;
+  }
+}
+
+/* ----------------------------------------------------
+   💻 Tablets + Small Laptops (768px – 1024px)
+-----------------------------------------------------*/
+@media (min-width: 768px) and (max-width: 1024px) {
+
+  .products {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* ----------------------------------------------------
+   🖥 Large Screens (above 1024px)
+-----------------------------------------------------*/
+@media (min-width: 1024px) {
+
+  .products {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
 </style>
 </head>
 
@@ -116,14 +188,15 @@ nav a {
 <div id="toast">Added to cart!</div>
 
 <section class="products">
-
-  <div class="product" data-id="1" data-name="Running Shoes" data-price="1499">
+<a href="Prod1.html" class="product-link">
+   <div class="product" data-id="1" data-name="Running Shoes" data-price="1499">
     <span class="wish">♡</span>
     <img src="https://assets.adidas.com/images/w_600,f_auto,q_auto/ab3f322e9d194cb3bd2e90ec6cfa2c95_9366/Predator_League_Firm-Multi-Ground_Boots_White_ID1330_HM1.jpg" />
     <h3>Running Shoes</h3>
     <p>₹1499</p>
     <button class="add">Add to Cart</button>
   </div>
+</a>
 
   <div class="product" data-id="2" data-name="Smart Watch" data-price="2499">
     <span class="wish">♡</span>
@@ -141,6 +214,7 @@ nav a {
     <button class="add">Add to Cart</button>
   </div>
 
+<a href="Prod2.html" class="product-link">
   <div class="product" data-id="4" data-name="Mobile Phone" data-price="22999">
     <span class="wish">♡</span>
     <img src="https://encrypted-tbn2.gstatic.com/shopping?q=tbn:ANd9GcRAvQbXQJBO-7W5IbgYDBhisF4bbjOnx5hBc_WqndKgNAUvrfzizZtmz-EnABJJc77Z_YeGjJunO0pjdT2KCQXSjhSenSQ1BY0zc6uEpABJ1luyjms_V3DY&usqp=CAc" />
@@ -148,6 +222,7 @@ nav a {
     <p>₹22,999</p>
     <button class="add">Add to Cart</button>
   </div>
+</a>
 
 </section>
 
