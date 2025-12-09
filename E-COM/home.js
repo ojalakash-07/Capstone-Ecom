@@ -18,7 +18,6 @@ document.querySelectorAll(".wish").forEach(btn => {
   });
 });
 
-
 // THEME TOGGLE
 const themeBtn = document.getElementById("themeBtn");
 

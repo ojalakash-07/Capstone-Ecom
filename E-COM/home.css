@@ -1,37 +1,27 @@
-:root {
-  --bg: #ffffff;
-  --text: #000000;
-  --card: #f4f4f4;
-  --header: #007bff;
+.dark {
+  background-color: rgb(16, 15, 15);
+  color: white;
 }
 
-.dark {
-  --bg: #111111;
-  --text: #ffffff;
-  --card: #222222;
-  --header: #0056d6;
+.dark .product{
+    background-color: #3a3939;
+    color: white;
 }
 
 body {
-  background: var(--bg);
-  color: var(--text);
+  background: white;
+  color: black;
   transition: 0.3s;
 }
 
-header {
-  background: var(--header);
-}
-
-.product {
-  background: var(--card);
-}
-
 body {
-  margin:0; font-family:Arial; /*background:var(--bg); color:var(--text); */
+  margin:0; font-family:Arial; 
   transition:0.3s;
 }
 
-/* HEADER */
+
+
+
 header {
   display:flex; justify-content:space-between; align-items:center;
   padding:15px 25px; background:#007bff; color:white;
@@ -47,13 +37,17 @@ nav a {
   display:inline-block; background:red; padding:4px 10px; border-radius:20px;
 }
 
-/* SEARCH BAR */
+
+
+
 #searchBar {
   width:90%; padding:10px; margin:20px auto; display:block;
   border-radius:8px; border:1px solid #aaa;
 }
 
-/* PRODUCTS */
+
+
+
 .product-link {
   text-decoration: none;
   color: inherit;
@@ -84,12 +78,17 @@ nav a {
 }
 .product button:hover { opacity:0.8; }
 
-/* WISHLIST HEART */
+
+
+
+
 .wish {
   cursor:pointer; font-size:20px; float:right; user-select:none;
 }
 
-/* MOBILE NAV */
+
+
+
 #mobileMenu { display:none; flex-direction:column; background:#007bff; padding:10px; }
 #mobileMenu a { color:white; padding:8px 0; }
 #mobileMenu.show { display:flex; }
@@ -100,9 +99,7 @@ nav a {
   #mobileMenu a { padding:0; }
 }
 
-/* 
-   Mobile Phones (max-width: 600px)
-*/
+
 @media (max-width: 600px) {
 
   header {
@@ -127,9 +124,8 @@ nav a {
   }
 }
 
-/* 
-   Small Tablets (600px – 768px)
-*/
+
+
 @media (min-width: 600px) and (max-width: 768px) {
 
   .products {
@@ -141,7 +137,8 @@ nav a {
   }
 }
 
-/* Tablets and Small Laptops (768px – 1024px)  */
+
+
 @media (min-width: 768px) and (max-width: 1024px) {
 
   .products {
@@ -149,9 +146,8 @@ nav a {
   }
 }
 
-/*
-   Large Screens (above 1024px)
-*/
+
+
 @media (min-width: 1024px) {
 
   .products {
